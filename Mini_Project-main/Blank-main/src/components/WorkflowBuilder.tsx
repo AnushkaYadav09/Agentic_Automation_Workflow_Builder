@@ -18,7 +18,6 @@ import BlockConfigPanel from './BlockConfigPanel';
 const nodeTypes = {
   custom: CustomNode
 };
-
 const WorkflowBuilder: React.FC = () => {
   const { currentWorkflow, addConnection, deleteConnection, updateBlock, deleteBlock } = useWorkflow();
   const [selectedBlock, setSelectedBlock] = useState<WorkflowBlock | null>(null);
