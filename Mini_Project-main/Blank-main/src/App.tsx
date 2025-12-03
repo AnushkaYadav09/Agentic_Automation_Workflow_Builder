@@ -13,9 +13,8 @@ import { Workflow, Activity, Sparkles, LogOut, Shield, UserCog, User, Users, Cal
 
 type Tab = 'builder' | 'executions' | 'suggestions' | 'activity' | 'scheduled';
 
-// TODO: Replace with your actual Google Client ID from Google Cloud Console
-// Get it from: https://console.cloud.google.com/apis/credentials
-const GOOGLE_CLIENT_ID = '460454436602-4cos0ped4vgalbss8bmjkmsl9loccadf.apps.googleusercontent.com';
+// Get Google Client ID from environment variables
+const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID || '460454436602-4cos0ped4vgalbss8bmjkmsl9loccadf.apps.googleusercontent.com';
 
 // Authorized emails for specific roles
 const AUTHORIZED_EMAILS = {

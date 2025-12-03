@@ -12,7 +12,8 @@ export const sendEmail = async (params: EmailParams): Promise<boolean> => {
     console.log('Attempting to send email to:', params.to);
     
     // Try to use the backend API
-    const response = await fetch('http://localhost:8001/api/send-email', {
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8001';
+    const response = await fetch(`${apiUrl}/api/send-email`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
