@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Calendar, Clock, Mail, Trash2, CheckCircle, Paperclip } from 'lucide-react';
+import { Calendar, Clock, Mail, Trash2, Paperclip } from 'lucide-react';
 import ScheduleEmailModal, { ScheduleData } from './ScheduleEmailModal';
 
 interface ScheduledEmail extends ScheduleData {
