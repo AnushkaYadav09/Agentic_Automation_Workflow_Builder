@@ -12,7 +12,8 @@ export const sendEmail = async (params: EmailParams): Promise<boolean> => {
     console.log('Attempting to send email to:', params.to);
     
     // Try to use the backend API
-    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8001';
+    const apiUrl = import.meta.env.VITE_API_URL || 'https://agentic-automation-workflow-builder-1.onrender.com';
+    console.log('Using API URL:', apiUrl);
     const response = await fetch(`${apiUrl}/api/send-email`, {
       method: 'POST',
       headers: {
